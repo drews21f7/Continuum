@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		3A8B96CC22D5308400B3203C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B96CB22D5308400B3203C /* AppDelegate.swift */; };
-		3A8B96CE22D5308400B3203C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B96CD22D5308400B3203C /* ViewController.swift */; };
 		3A8B96D122D5308400B3203C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8B96CF22D5308400B3203C /* Main.storyboard */; };
 		3A8B96D322D5308500B3203C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8B96D222D5308500B3203C /* Assets.xcassets */; };
 		3A8B96D622D5308500B3203C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8B96D422D5308500B3203C /* LaunchScreen.storyboard */; };
+		3A8B96E322D53AC000B3203C /* PostListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B96E222D53AC000B3203C /* PostListTableViewController.swift */; };
+		3A8B96E522D53BF000B3203C /* PostDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B96E422D53BF000B3203C /* PostDetailTableViewController.swift */; };
+		3A8B96E722D53C3900B3203C /* AddPostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B96E622D53C3900B3203C /* AddPostTableViewController.swift */; };
+		3A8B96E922D53C8800B3203C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B96E822D53C8800B3203C /* Post.swift */; };
+		3A8B96EB22D5490400B3203C /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B96EA22D5490400B3203C /* Comment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3A8B96C822D5308400B3203C /* Continuum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Continuum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8B96CB22D5308400B3203C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3A8B96CD22D5308400B3203C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3A8B96D022D5308400B3203C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A8B96D222D5308500B3203C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A8B96D522D5308500B3203C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A8B96D722D5308500B3203C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A8B96E222D53AC000B3203C /* PostListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListTableViewController.swift; sourceTree = "<group>"; };
+		3A8B96E422D53BF000B3203C /* PostDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailTableViewController.swift; sourceTree = "<group>"; };
+		3A8B96E622D53C3900B3203C /* AddPostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostTableViewController.swift; sourceTree = "<group>"; };
+		3A8B96E822D53C8800B3203C /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		3A8B96EA22D5490400B3203C /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,58 @@
 		3A8B96CA22D5308400B3203C /* Continuum */ = {
 			isa = PBXGroup;
 			children = (
-				3A8B96CB22D5308400B3203C /* AppDelegate.swift */,
-				3A8B96CD22D5308400B3203C /* ViewController.swift */,
+				3A8B96DF22D5329900B3203C /* Models */,
+				3A8B96DD22D5326600B3203C /* Controllers */,
+				3A8B96DE22D5328000B3203C /* Resources */,
 				3A8B96CF22D5308400B3203C /* Main.storyboard */,
+			);
+			path = Continuum;
+			sourceTree = "<group>";
+		};
+		3A8B96DD22D5326600B3203C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3A8B96E122D532AA00B3203C /* View Controllers */,
+				3A8B96E022D532A400B3203C /* Model Controllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3A8B96DE22D5328000B3203C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3A8B96CB22D5308400B3203C /* AppDelegate.swift */,
 				3A8B96D222D5308500B3203C /* Assets.xcassets */,
 				3A8B96D422D5308500B3203C /* LaunchScreen.storyboard */,
 				3A8B96D722D5308500B3203C /* Info.plist */,
 			);
-			path = Continuum;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3A8B96DF22D5329900B3203C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3A8B96E822D53C8800B3203C /* Post.swift */,
+				3A8B96EA22D5490400B3203C /* Comment.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3A8B96E022D532A400B3203C /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		3A8B96E122D532AA00B3203C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3A8B96E222D53AC000B3203C /* PostListTableViewController.swift */,
+				3A8B96E422D53BF000B3203C /* PostDetailTableViewController.swift */,
+				3A8B96E622D53C3900B3203C /* AddPostTableViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +187,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A8B96CE22D5308400B3203C /* ViewController.swift in Sources */,
 				3A8B96CC22D5308400B3203C /* AppDelegate.swift in Sources */,
+				3A8B96EB22D5490400B3203C /* Comment.swift in Sources */,
+				3A8B96E322D53AC000B3203C /* PostListTableViewController.swift in Sources */,
+				3A8B96E722D53C3900B3203C /* AddPostTableViewController.swift in Sources */,
+				3A8B96E522D53BF000B3203C /* PostDetailTableViewController.swift in Sources */,
+				3A8B96E922D53C8800B3203C /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +340,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49NKW8MQX9;
-				INFOPLIST_FILE = Continuum/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Continuum/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +358,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49NKW8MQX9;
-				INFOPLIST_FILE = Continuum/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Continuum/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
