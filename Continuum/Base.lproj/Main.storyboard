@@ -36,14 +36,62 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="504" id="qDr-9P-iCS">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="504" id="qDr-9P-iCS" customClass="PostTableViewCell" customModule="Continuum" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="504"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qDr-9P-iCS" id="5AE-6T-voH">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="503.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iTM-Se-RP7">
+                                            <rect key="frame" x="40" y="385" width="314" height="88"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Caption)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUu-vh-yXf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="72" height="59.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Mw8-qZ-2EK">
+                                                    <rect key="frame" x="0.0" y="67.5" width="236.5" height="20.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4p-TE-AL5">
+                                                            <rect key="frame" x="0.0" y="0.0" width="88" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(comment count)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEq-ae-m4i">
+                                                            <rect key="frame" x="104" y="0.0" width="132.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spaceEmptyState" translatesAutoresizingMaskIntoConstraints="NO" id="LNb-hv-TXV">
+                                            <rect key="frame" x="40" y="31" width="334" height="334.00000000000011"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="LNb-hv-TXV" secondAttribute="height" multiplier="1:1" id="Gdp-e4-T0Y"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="iTM-Se-RP7" secondAttribute="trailing" constant="40" id="CBU-ul-t67"/>
+                                        <constraint firstItem="iTM-Se-RP7" firstAttribute="leading" secondItem="5AE-6T-voH" secondAttribute="leadingMargin" constant="20" id="RL7-uB-BEh"/>
+                                        <constraint firstItem="iTM-Se-RP7" firstAttribute="top" secondItem="LNb-hv-TXV" secondAttribute="bottom" constant="20" id="YKM-GJ-k1N"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="LNb-hv-TXV" secondAttribute="trailing" constant="20" id="ZkT-8M-hcV"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="iTM-Se-RP7" secondAttribute="bottom" constant="20" id="f3I-Uh-fGK"/>
+                                        <constraint firstItem="LNb-hv-TXV" firstAttribute="leading" secondItem="5AE-6T-voH" secondAttribute="leadingMargin" constant="20" id="fFT-eo-tWj"/>
+                                        <constraint firstItem="LNb-hv-TXV" firstAttribute="top" secondItem="5AE-6T-voH" secondAttribute="topMargin" constant="20" id="uPd-Bu-iVc"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="captionLabel" destination="qUu-vh-yXf" id="1VA-bH-c6F"/>
+                                    <outlet property="commentCountLabel" destination="SEq-ae-m4i" id="r78-gL-pZW"/>
+                                    <outlet property="postPhotoImageView" destination="LNb-hv-TXV" id="SzC-Gy-TFX"/>
                                     <segue destination="FP1-lO-rqf" kind="show" id="yQF-mH-fFq"/>
                                 </connections>
                             </tableViewCell>
@@ -151,4 +199,7 @@
             <point key="canvasLocation" x="-117" y="-624"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="spaceEmptyState" width="1024" height="569"/>
+    </resources>
 </document>
