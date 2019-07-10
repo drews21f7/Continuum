@@ -23,7 +23,10 @@ class PostListTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as? PostTableViewCell else { return UITableViewCell() }
+        
+        let post = PostController.sharedInstance.posts[indexPath.row]
+        cell.post = post
 
         // Configure the cell...
 
@@ -34,8 +37,13 @@ class PostListTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "toPostDetailVC" {
+            guard let destinationVC = segue.destination as? PostDetailTableViewController else { return }
+            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+            let post = PostController.sharedInstance.posts[indexPath.row]
+            destinationVC.post = post
+        }
     }
 
 

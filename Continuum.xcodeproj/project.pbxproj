@@ -18,6 +18,7 @@
 		3A8B96EB22D5490400B3203C /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B96EA22D5490400B3203C /* Comment.swift */; };
 		3A8B96ED22D54A2700B3203C /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B96EC22D54A2700B3203C /* PostController.swift */; };
 		3A8B96EF22D54D2400B3203C /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B96EE22D54D2400B3203C /* PostTableViewCell.swift */; };
+		3A8B96F322D567E800B3203C /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B96F222D567E800B3203C /* DateExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		3A8B96EA22D5490400B3203C /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		3A8B96EC22D54A2700B3203C /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
 		3A8B96EE22D54D2400B3203C /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		3A8B96F222D567E800B3203C /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +68,9 @@
 		3A8B96CA22D5308400B3203C /* Continuum */ = {
 			isa = PBXGroup;
 			children = (
+				3A8B96DD22D5326600B3203C /* Controllers */,
 				3A8B96F022D54D2800B3203C /* Views */,
 				3A8B96DF22D5329900B3203C /* Models */,
-				3A8B96DD22D5326600B3203C /* Controllers */,
 				3A8B96DE22D5328000B3203C /* Resources */,
 				3A8B96CF22D5308400B3203C /* Main.storyboard */,
 			);
@@ -80,6 +82,7 @@
 			children = (
 				3A8B96E122D532AA00B3203C /* View Controllers */,
 				3A8B96E022D532A400B3203C /* Model Controllers */,
+				3A8B96F422D567EC00B3203C /* Helpers+Extensions */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -128,6 +131,14 @@
 				3A8B96EE22D54D2400B3203C /* PostTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		3A8B96F422D567EC00B3203C /* Helpers+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3A8B96F222D567E800B3203C /* DateExtension.swift */,
+			);
+			path = "Helpers+Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +216,7 @@
 				3A8B96EB22D5490400B3203C /* Comment.swift in Sources */,
 				3A8B96E322D53AC000B3203C /* PostListTableViewController.swift in Sources */,
 				3A8B96EF22D54D2400B3203C /* PostTableViewCell.swift in Sources */,
+				3A8B96F322D567E800B3203C /* DateExtension.swift in Sources */,
 				3A8B96E722D53C3900B3203C /* AddPostTableViewController.swift in Sources */,
 				3A8B96ED22D54A2700B3203C /* PostController.swift in Sources */,
 				3A8B96E522D53BF000B3203C /* PostDetailTableViewController.swift in Sources */,
