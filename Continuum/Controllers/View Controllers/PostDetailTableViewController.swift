@@ -26,8 +26,29 @@ class PostDetailTableViewController: UITableViewController {
         photoImageView.image = post?.photo
         tableView.reloadData()
     }
+    
+    func presentCommentAlertController() {
+        let alertController = UIAlertController(title: "Add a comment", message: "This app is anonymous, it is legion, or something.", preferredStyle: .alert)
+        alertController.addTextField { (textField) in
+            textField.placeholder = "Your words go here..."
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let commentAction = UIAlertAction(title: "Comment", style: .default) { (_) in
+            guard let commentText = alertController.textFields?.first?.text,
+            !commentText.isEmpty,
+            let post = self.post else { return }
+            PostController.sharedInstance.addComment(text: commentText, post: post, completion: { (comment) in
+            })
+            self.tableView.reloadData()
+        }
+        alertController.addAction(cancelAction)
+        alertController.addAction(commentAction)
+        self.present(alertController, animated: true, completion: nil)
+        
+    }
 
     @IBAction func commentButtonTapped(_ sender: Any) {
+        presentCommentAlertController()
     }
     
     @IBAction func shareButtonTapped(_ sender: Any) {
