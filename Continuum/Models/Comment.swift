@@ -8,7 +8,11 @@
 
 import Foundation
 
-class Comment {
+class Comment: SearchableRecord {
+    func matches(searchTerm: String) -> Bool {
+        return text.contains(searchTerm)
+    }
+    
     var text: String
     var timestamp: Date
     weak var post: Post?

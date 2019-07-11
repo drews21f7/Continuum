@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A43274022D7CAB1001DAC56 /* SearchableRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A43273F22D7CAB1001DAC56 /* SearchableRecord.swift */; };
 		3A8B96CC22D5308400B3203C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8B96CB22D5308400B3203C /* AppDelegate.swift */; };
 		3A8B96D122D5308400B3203C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8B96CF22D5308400B3203C /* Main.storyboard */; };
 		3A8B96D322D5308500B3203C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8B96D222D5308500B3203C /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A43273F22D7CAB1001DAC56 /* SearchableRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableRecord.swift; sourceTree = "<group>"; };
 		3A8B96C822D5308400B3203C /* Continuum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Continuum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8B96CB22D5308400B3203C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A8B96D022D5308400B3203C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			children = (
 				3A8B96E822D53C8800B3203C /* Post.swift */,
 				3A8B96EA22D5490400B3203C /* Comment.swift */,
+				3A43273F22D7CAB1001DAC56 /* SearchableRecord.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A43274022D7CAB1001DAC56 /* SearchableRecord.swift in Sources */,
 				3A8B96CC22D5308400B3203C /* AppDelegate.swift in Sources */,
 				3A8B96EB22D5490400B3203C /* Comment.swift in Sources */,
 				3A8B96E322D53AC000B3203C /* PostListTableViewController.swift in Sources */,

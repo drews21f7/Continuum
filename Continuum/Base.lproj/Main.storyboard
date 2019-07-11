@@ -35,9 +35,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="1iu-eF-cSO">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="504" id="qDr-9P-iCS" customClass="PostTableViewCell" customModule="Continuum" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="504"/>
+                                <rect key="frame" x="0.0" y="72" width="414" height="504"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qDr-9P-iCS" id="5AE-6T-voH">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="503.5"/>
@@ -72,7 +77,7 @@
                                             </subviews>
                                         </stackView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spaceEmptyState" translatesAutoresizingMaskIntoConstraints="NO" id="LNb-hv-TXV">
-                                            <rect key="frame" x="40" y="31" width="334" height="334.00000000000011"/>
+                                            <rect key="frame" x="40" y="31" width="334" height="334"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="LNb-hv-TXV" secondAttribute="height" multiplier="1:1" id="Gdp-e4-T0Y"/>
                                             </constraints>
