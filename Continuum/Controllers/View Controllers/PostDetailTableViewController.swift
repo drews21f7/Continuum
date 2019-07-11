@@ -12,6 +12,8 @@ class PostDetailTableViewController: UITableViewController {
     
     var post: Post? {
         didSet {
+            //why did this fix my issue? and only kind of
+            loadViewIfNeeded()
             updateViews()
         }
     }

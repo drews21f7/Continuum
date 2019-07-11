@@ -11,6 +11,8 @@ import UIKit
 class PostController {
     
     static let sharedInstance = PostController()
+    //What's this do
+    private init () {}
     
     var posts: [Post] = []
     
